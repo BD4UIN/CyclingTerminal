@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+.kotlin/
+build/
+**/build/
+
+# Android Studio / IDE
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# 本地敏感配置（密钥 / 签名凭据，勿提交）
+local.properties
+local.properties.example.backup
+
+# 签名密钥库（私钥，严禁公开）
+release.keystore
+*.jks
+*.keystore
+
+# 系统文件
+.DS_Store
+Thumbs.db

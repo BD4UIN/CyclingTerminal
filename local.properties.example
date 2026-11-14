@@ -1,0 +1,19 @@
+## 本地敏感配置模板
+将本文件复制为 `local.properties`，填入你自己的值（此文件已被 .gitignore 忽略，不会上传到公开仓库）。
+
+```properties
+sdk.dir=C\:\\你的AndroidSdk路径
+
+# 和风天气 API（https://console.qweather.com 注册后获取）
+# 2026 新 API：每个账号有专属 Host，在 console.qweather.com/setting 查看
+QWEATHER_KEY=你的APIKey
+QWEATHER_HOST=你的专属Host
+
+# release 签名密钥库密码（生成 release.keystore 时设置）
+KEYSTORE_PASSWORD=你的密钥库密码
+```
+
+说明：
+- `QWEATHER_KEY` / `QWEATHER_HOST`：用于风速/天气/预警功能，留空则天气功能静默失效，其余功能不受影响。
+- `KEYSTORE_PASSWORD`：仅 `assembleRelease` 需要；用 `assembleDebug` 调试时无需。
+- `release.keystore` 也已被 .gitignore 忽略，需自行用 keytool 生成（别名 `cyclingterminal`）。
